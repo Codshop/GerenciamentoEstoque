@@ -4,6 +4,20 @@
         <meta charset="UTF-8">
         <title>Sistema de Gestão de Estoque</title>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+        <style>
+            .carousel-item img {
+                height: 300px; /* Definir um valor fixo para a altura */
+                width: auto;
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .carousel-control-prev,
+            .carousel-control-next {
+                align-items: center; /* Coloca as setas no centro vertical da imagem */
+            }
+        </style>
     </head>
 <body class="bg-light py-3">
   <div class="container">
@@ -12,6 +26,44 @@
         <h1 class="text-center">Sistema de Gestão de Estoque</h1>
       </div>
     </div>
+    <div id="meuCarousel" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#meuCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#meuCarousel" data-slide-to="1"></li>
+        <li data-target="#meuCarousel" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="C:\Users\felip\Documents\Projeto001\Prototipo\img\60484.jpg" alt="Imagem 1">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Título 1</h5>
+            <p>Descrição 1</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="C:\Users\felip\Documents\Projeto001\Prototipo\img\60485.jpg" alt="Imagem 2">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Título 2</h5>
+            <p>Descrição 2</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="C:\Users\felip\Documents\Projeto001\Prototipo\img\60487.jpg" alt="Imagem 3">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Título 3</h5>
+            <p>Descrição 3</p>
+          </div>
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#meuCarousel" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Anterior</span>
+      </a>
+      <a class="carousel-control-next" href="#meuCarousel" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Próximo</span>
+      </a>
+    </div>    
     <div class="row">
       <div class="col-md-6">
         <div class="d-flex justify-content-between align-items-center mb-3">
@@ -83,5 +135,7 @@
       </div>
     </div>
   </div>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 </body>
 </html>
