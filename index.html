@@ -1,92 +1,82 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
     <head>
         <meta charset="UTF-8">
-        <title>Stock Management System</title>
+        <title>Sistema de Gestão de Estoque</title>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-        <style>
-            body {
-                margin-top: 20px;
-            }
-            h1 {
-                color: white;
-                padding: 20px 0;
-            }
-            .header {
-                background-color: #007BFF;
-                text-align: center;
-            }
-            .add-button {
-                margin-bottom: 20px;
-            }
-        </style>
     </head>
-<body>
-  <div class="header">
-    <h1>Sistema de Estoque</h1>
-  </div>
+<body class="bg-light py-3">
   <div class="container">
     <div class="row">
+      <div class="col-12 bg-primary text-white p-3 mb-3 rounded">
+        <h1 class="text-center">Sistema de Gestão de Estoque</h1>
+      </div>
+    </div>
+    <div class="row">
       <div class="col-md-6">
-        <h2>Products</h2>
-        <button type="button" class="btn btn-primary add-button">Add Product</button>
+        <div class="d-flex justify-content-between align-items-center mb-3">
+          <h2>Produtos</h2>
+          <button type="button" class="btn btn-primary">Adicionar Produto</button>
+        </div>
         <table class="table table-striped">
           <thead>
             <tr>
-              <th>Name</th>
-              <th>Quantity</th>
-              <th>Price</th>
+              <th>Nome</th>
+              <th>Quantidade</th>
+              <th>Preço</th>
             </tr>
           </thead>
           <tbody>
             <tr>
               <td>Produto 1</td>
               <td>10</td>
-              <td>$10</td>
+              <td>R$10</td>
             </tr>
             <tr>
               <td>Produto 2</td>
               <td>20</td>
-              <td>$20</td>
+              <td>R$20</td>
             </tr>
             <tr>
               <td>Produto 3</td>
               <td>30</td>
-              <td>$30</td>
+              <td>R$30</td>
             </tr>
-                </tbody>
-            </table>
+          </tbody>
+        </table>
+      </div>
+      <div class="col-md-6">
+        <div class="d-flex justify-content-between align-items-center mb-3">
+          <h2>Pedidos</h2>
+          <button type="button" class="btn btn-primary">Adicionar Pedido</button>
         </div>
-        <div class="col-md-6">
-            <h2>Orders</h2>
-            <button type="button" class="btn btn-primary add-button">Add Order</button>
-            <table class="table table-striped">
-            <thead>
-                <tr>
-                <th>Customer</th>
-              <th>Product</th>
-              <th>Quantity</th>
-              <th>Price</th>
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>Cliente</th>
+              <th>Produto</th>
+              <th>Quantidade</th>
+              <th>Preço</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td>Customer 1</td>
-              <td>Product 1</td>
+              <td>Cliente 1</td>
+              <td>Produto 1</td>
               <td>1</td>
-              <td>$10</td>
+              <td>R$10</td>
             </tr>
             <tr>
-              <td>Customer 2</td>
-              <td>Product 2</td>
+              <td>Cliente 2</td>
+              <td>Produto 2</td>
               <td>2</td>
-              <td>$40</td>
+              <td>R$40</td>
             </tr>
             <tr>
-              <td>Customer 3</td>
-              <td>Product 3</td>
+              <td>Cliente 3</td>
+              <td>Produto 3</td>
               <td>3</td>
-              <td>$90</td>
+              <td>R$90</td>
             </tr>
           </tbody>
         </table>
