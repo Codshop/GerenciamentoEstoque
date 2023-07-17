@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Adicionar Pedido</title>
+</head>
+<body>
+    <h1>Adicionar Pedido</h1>
+    <form>
+        <label for="order-client">Cliente:</label><br>
+        <input type="text" id="order-client" name="order-client"><br>
+        <label for="order-product">Produto:</label><br>
+        <input type="text" id="order-product" name="order-product"><br>
+        <label for="order-quantity">Quantidade:</label><br>
+        <input type="number" id="order-quantity" name="order-quantity"><br>
+        <label for="order-price">Preço:</label><br>
+        <input type="text" id="order-price" name="order-price"><br>
+        <input type="button" value="Submit" onclick="addOrder()">
+    </form>
+
+    <script src="main.js"></script>
+    <script>
+        function addOrder() {
+            const client = document.getElementById('order-client').value;
+            const product = document.getElementById('order-product').value;
+            const quantity = document.getElementById('order-quantity').value;
+            const price = document.getElementById('order-price').value;
+
+            const order = {
+                client: client,
+                product: product,
+                quantity: quantity,
+                price: price
+            };
+
+            const url = 'mongodb://localhost:27017/Estoque001'; // MongoDB connection URL
+            fetch(url, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(order)
+            })
+            .then(response => response.json())
+            .then(data => {
+                console.log('Order added successfully:', data);
+                // Handle success or display a success message
+            })
+            .catch(error => {
+                console.error('Error adding order:', error);
+                // Handle error or display an error message
+            });
+        }
+    </script>
+</body>
+</html>

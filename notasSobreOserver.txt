@@ -1,0 +1,22 @@
+Algumas notas sobre este código:
+
+require: Esta função é usada para incluir módulos no arquivo.
+
+MongoClient.connect: Esta função é usada para 
+estabelecer uma conexão com o servidor MongoDB.
+
+db.collection: Este método é usado para obter uma coleção do MongoDB.
+
+colecao.insertMany e colecao.insertOne: Estes métodos são usados para 
+inserir vários ou um único documento, respectivamente, na coleção.
+
+colecao.find: Este método é usado para buscar documentos na 
+coleção. Se o objeto passado como argumento estiver vazio ({}), 
+todos os documentos serão retornados.
+
+app.post: Este método define uma rota POST no servidor Express.
+Quando um pedido POST é enviado para '/add-produto', a função especificada é executada.
+
+app.listen: Este método inicia o servidor Express na porta especificada.
+
+Lembre-se de substituir {/* Aqui vai a informação do produto */} pelas informações do produto que deseja inserir.

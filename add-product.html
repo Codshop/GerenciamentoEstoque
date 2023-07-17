@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Adicionar Produto</title>
+</head>
+<body>
+    <h1>Adicionar Produto</h1>
+    <form>
+        <label for="product-name">Nome do Produto:</label><br>
+        <input type="text" id="product-name" name="product-name"><br>
+        <label for="product-quantity">Quantidade:</label><br>
+        <input type="number" id="product-quantity" name="product-quantity"><br>
+        <label for="product-price">Preço:</label><br>
+        <input type="text" id="product-price" name="product-price"><br>
+        <input type="button" value="Submit" onclick="addProduct()">
+    </form>
+
+    <script src="main.js"></script>
+    <script>
+        function addProduct() {
+            const name = document.getElementById('product-name').value;
+            const quantity = document.getElementById('product-quantity').value;
+            const price = document.getElementById('product-price').value;
+
+            const product = {
+                name: name,
+                quantity: quantity,
+                price: price
+            };
+
+            const url = 'mongodb://localhost:27017/Estoque001'; // MongoDB connection URL
+            fetch(url, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(product)
+            })
+            .then(response => response.json())
+            .then(data => {
+                console.log('Product added successfully:', data);
+                // Handle success or display a success message
+            })
+            .catch(error => {
+                console.error('Error adding product:', error);
+                // Handle error or display an error message
+            });
+        }
+    </script>
+</body>
+</html>
