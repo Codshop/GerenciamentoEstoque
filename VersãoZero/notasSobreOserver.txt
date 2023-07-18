@@ -20,3 +20,5 @@ Quando um pedido POST é enviado para '/add-produto', a função especificada é
 app.listen: Este método inicia o servidor Express na porta especificada.
 
 Lembre-se de substituir {/* Aqui vai a informação do produto */} pelas informações do produto que deseja inserir.
+
+teste
